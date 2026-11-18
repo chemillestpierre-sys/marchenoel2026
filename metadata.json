@@ -1,0 +1,6 @@
+{
+  "name": "Marché de Noël — École Saint-Pierre",
+  "description": "Plateforme d'inscription des parents bénévoles au Marché de Noël 2026 de l'École Saint-Pierre de Chemillé-en-Anjou (APEL Saint-Pierre – La Christmas Team).",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,44 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{db}/documents {
+
+    function signedIn() { return request.auth != null; }
+    function isAdmin() {
+      return signedIn() && exists(/databases/$(db)/documents/admins/$(request.auth.uid));
+    }
+    function validName(v) { return v is string && v.size() > 0 && v.size() <= 40; }
+
+    match /inscriptions/{id} {
+      allow read: if true;
+      allow create: if isAdmin() || (
+        signedIn()
+        && request.resource.data.keys().hasOnly(['slotId','prenom','nom','ownerUid','source','createdAt'])
+        && request.resource.data.ownerUid == request.auth.uid
+        && request.resource.data.source == 'web'
+        && request.resource.data.slotId is string && request.resource.data.slotId.size() <= 60
+        && validName(request.resource.data.prenom)
+        && validName(request.resource.data.nom)
+        && request.resource.data.createdAt == request.time
+      );
+      allow update: if isAdmin();
+      allow delete: if isAdmin() || (signedIn() && resource.data.ownerUid == request.auth.uid);
+    }
+
+    match /contacts/{id} {
+      allow read: if isAdmin() || (signedIn() && resource.data.ownerUid == request.auth.uid);
+      allow create: if isAdmin() || (signedIn() && request.resource.data.ownerUid == request.auth.uid);
+      allow update, delete: if isAdmin() || (signedIn() && resource.data.ownerUid == request.auth.uid);
+    }
+
+    match /journal/{id} {
+      allow create: if signedIn();
+      allow read: if isAdmin();
+      allow update, delete: if false;
+    }
+
+    match /admins/{uid} {
+      allow read: if signedIn() && request.auth.uid == uid;
+      allow write: if false;
+    }
+  }
+}

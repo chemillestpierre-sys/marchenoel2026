@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 360" role="img" aria-label="Logo École Saint-Pierre">
+  <rect width="360" height="360" rx="28" fill="#FFFFFF" />
+  <g fill="none" stroke-linecap="round" stroke-linejoin="round" style="mix-blend-mode:multiply">
+    <!-- Ligne 1 : ÉCOLE -->
+    <!-- É -->
+    <path d="M84 62 H102 M84 62 V94 M84 78 H99 M84 94 H102" stroke="#E11D67" stroke-width="8.5" />
+    <path d="M90 50 L99 44" stroke="#E11D67" stroke-width="6.5" />
+    <!-- C -->
+    <path d="M142 66 C137 61 128 61 123 68 C119 74 119 84 123 89 C128 96 137 96 142 91" stroke="#F59E0B" stroke-width="8.5" />
+    <!-- O -->
+    <ellipse cx="173" cy="78" rx="14" ry="16" stroke="#38BDF8" stroke-width="8.5" />
+    <path d="M173 62 A14 16 0 0 1 187 78" stroke="#1E3A8A" stroke-width="8.5" />
+    <!-- L -->
+    <path d="M208 62 V94 H225" stroke="#FACC15" stroke-width="8.5" />
+    <!-- E -->
+    <path d="M248 62 H266 M248 62 V94 M248 78 H263 M248 94 H266" stroke="#22C55E" stroke-width="8.5" />
+
+    <!-- Ligne 2 : SAINT -->
+    <!-- S -->
+    <path d="M82 132 C76 125 60 124 53 133 C47 141 52 150 67 154 C82 158 88 167 81 177 C74 186 56 185 49 177" stroke="#1D4ED8" stroke-width="12.5" />
+    <path d="M62 127 C52 130 49 144 63 152" stroke="#38BDF8" stroke-width="12.5" />
+    <!-- A -->
+    <path d="M104 183 L125 127 L146 183 M112 165 H138" stroke="#7C3AED" stroke-width="12.5" />
+    <!-- I -->
+    <path d="M172 127 V183" stroke="#E11D67" stroke-width="12.5" />
+    <!-- N -->
+    <path d="M199 183 V127 L236 183 V127" stroke="#F97316" stroke-width="12.5" />
+    <!-- T -->
+    <path d="M261 127 H311 M286 127 V183" stroke="#4D7C0F" stroke-width="12.5" />
+    <path d="M261 127 H311" stroke="#84CC16" stroke-width="12.5" />
+
+    <!-- Ligne 3 : PIERRE -->
+    <!-- P -->
+    <path d="M32 267 V211 H52 C63 211 69 218 69 228 C69 238 63 245 52 245 H32" stroke="#6D28D9" stroke-width="12.5" />
+    <!-- I -->
+    <path d="M88 211 V267" stroke="#FACC15" stroke-width="12.5" />
+    <!-- E -->
+    <path d="M114 211 H144 M114 211 V267 M114 239 H139 M114 267 H144" stroke="#16A34A" stroke-width="12.5" />
+    <!-- R 1 -->
+    <path d="M168 267 V211 H189 C200 211 206 218 206 227 C206 236 199 242 188 242 H168 M185 242 L207 267" stroke="#E11D67" stroke-width="12.5" />
+    <!-- R 2 -->
+    <path d="M229 267 V211 H250 C261 211 267 218 267 227 C267 236 260 242 249 242 H229 M246 242 L268 267" stroke="#0284C7" stroke-width="12.5" />
+    <!-- E 2 -->
+    <path d="M292 211 H322 M292 211 V267 M292 239 H317 M292 267 H322" stroke="#16A34A" stroke-width="12.5" />
+  </g>
+</svg>
